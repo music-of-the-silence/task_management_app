@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task Management App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>My Tasks</h1>
+
+    <form id="task-form">
+      <input type="text" id="task-name" placeholder="Task Name" required>
+
+      <div class="form-group">
+        <label for="category-select">Category:</label>
+        <select id="category-select">
+          <option value="Personal">Personal</option>
+          <option value="Work">Work</option>
+          <option value="Shopping">Shopping</option>
+          <option value="Study">Study</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Priority:</label>
+        <input type="radio" id="priority-high" name="priority" value="High" required>
+        <label for="priority-high">High</label>
+        <input type="radio" id="priority-medium" name="priority" value="Medium">
+        <label for="priority-medium">Medium</label>
+        <input type="radio" id="priority-low" name="priority" value="Low" checked>
+        <label for="priority-low">Low</label>
+      </div>
+
+      <button type="submit" id="add-edit-task-btn">Add Task</button>
+      <button type="button" id="cancel-edit-btn" style="display:none;">Cancel Edit</button>
+    </form>
+
+    <hr>
+
+    <div class="filters">
+      <label for="filter-category">Filter by Category:</label>
+      <select id="filter-category">
+        <option value="All">All</option>
+        <option value="Personal">Personal</option>
+        <option value="Work">Work</option>
+        <option value="Shopping">Shopping</option>
+        <option value="Study">Study</option>
+        <option value="Other">Other</option>
+      </select>
+
+      <label for="filter-priority">Filter by Priority:</label>
+      <select id="filter-priority">
+        <option value="All">All</option>
+        <option value="High">High</option>
+        <option value="Medium">Medium</option>
+        <option value="Low">Low</option>
+      </select>
+    </div>
+
+    <hr>
+
+    <h2>Your Tasks</h2>
+    <ul id="task-list">
+    </ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
